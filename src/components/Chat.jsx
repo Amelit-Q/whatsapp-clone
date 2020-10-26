@@ -28,8 +28,14 @@ export const Chat = () => {
           </IconButton>
         </div>
       </div>
+      <div className="chat__body">
+        <p className="chat__body-message">
+          <span className="chat__body-message-name">Heeee</span>
+          Test 1.39.12
+        </p>
+        <
+      </div> 
       <div className="chat__footer"></div>
-      <div className="chat__input"></div>
     </div>
   );
 };
