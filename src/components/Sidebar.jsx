@@ -2,13 +2,14 @@ import { Avatar, IconButton } from '@material-ui/core';
 import { Chat, DonutLarge, MoreVert, SearchOutlined } from '@material-ui/icons';
 import React from 'react';
 import './../styles/sidebar.scss';
+import { SidebarChat } from './SidebarChat';
 
 export const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className="sidebar__header">
         <Avatar />
-        <div className="sidebar__headerRight">
+        <div className="sidebar__header-right">
           <IconButton>
             <DonutLarge />
           </IconButton>
@@ -21,13 +22,14 @@ export const Sidebar = () => {
         </div>
       </div>
       <div className="sidebar__search">
-        <IconButton>
+        <div className="sidebar__search-container">
           <SearchOutlined />
-        </IconButton>
-        4943
-        <input placeholder="Search or start new chat" type="text" />
+          <input placeholder="Search or start new chat" type="text" />
+        </div>
       </div>
-      <div className="sidebar__chats"></div>
+      <div className="sidebar__chats">
+        <SidebarChat addNewChat />
+      </div>
     </div>
   );
 };
